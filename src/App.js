@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import IsLoadingAndError from './IsLoadingAndError';
 import Footer from './Footer';
 import Login from './Login';
 import Profile from './Profile';
@@ -19,24 +18,24 @@ class App extends React.Component {
   render() {
     console.log('app', this.props);
     return (
-      // <>
-      <Router>
-        {/* <IsLoadingAndError> */}
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            {this.props.auth0.isAuthenticated ? <MyFavoriteBooks /> : <Login />}
-          </Route>
+      
+        <Router>
+          {/* <IsLoadingAndError> */}
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              {this.props.auth0.isAuthenticated ? <MyFavoriteBooks /> : <Login />}
+            </Route>
 
-          {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}
-          <Route exact path="/profile">
-            <Profile />
-          </Route>
-        </Switch>
-        <Footer />
-        {/* </IsLoadingAndError> */}
-      </Router>
-      // </>
+            {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}
+            <Route exact path="/profile">
+              <Profile />
+            </Route>
+          </Switch>
+          <Footer />
+          {/* </IsLoadingAndError> */}
+        </Router>
+      
     );
   }
 }
