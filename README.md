@@ -19,7 +19,7 @@
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
-
+lab12
 Name of feature: log out
 
 Estimate of time needed to complete: 30
@@ -39,3 +39,33 @@ Start time: 2:00
 Finish time: 2:30
 
 Actual time needed to complete: 30
+
+Name of feature: get database 
+
+Estimate of time needed to complete: 1
+
+Start time: 2:00
+
+Finish time: 3:00
+
+Actual time needed to complete: 1
+___________________________________
+Name of feature: login  
+
+Estimate of time needed to complete: 1
+
+Start time: 3:00
+
+Finish time: 4:00
+
+Actual time needed to complete: 1
+__________________________________
+Name of feature: render card  
+
+Estimate of time needed to complete: 1
+
+Start time: 5:00
+
+Finish time: 6:00
+
+Actual time needed to complete: 1

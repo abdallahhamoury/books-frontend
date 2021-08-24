@@ -14,6 +14,9 @@ import {
 
 
 class App extends React.Component {
+constructor(props){
+  super(props);
+}
 
   render() {
     console.log('app', this.props);
