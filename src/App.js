@@ -5,12 +5,7 @@ import Login from './Login';
 import Profile from './Profile';
 import MyFavoriteBooks from './BestBooks'
 import { withAuth0 } from '@auth0/auth0-react';
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
 
 class App extends React.Component {
