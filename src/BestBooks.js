@@ -7,7 +7,7 @@ import Book from './Book';
 import SelectBook from "./SelectBook";
 import { withAuth0 } from "@auth0/auth0-react";
 import UpdateBook from './UpdateBook';
-//**********************************************************************************************************************************
+
 class MyFavoriteBooks extends React.Component {
   constructor() {
     super();
@@ -20,7 +20,7 @@ class MyFavoriteBooks extends React.Component {
     }
   }
 
-  //**********************************************************************************************************************************
+
   componentDidMount = async () => {
     try {
       let DataResult = await axios.get(`${process.env.REACT_APP_SERVER_LINK}/books?email=${this.props.auth0.user.email}`);
@@ -38,7 +38,7 @@ class MyFavoriteBooks extends React.Component {
       })
     }
   }
-  //**********************************************************************************************************************************
+
   handleAddBook = async (e) => {
     console.log(e.target.status.value);
     e.preventDefault();
@@ -48,21 +48,22 @@ class MyFavoriteBooks extends React.Component {
       book: DataResult.data,
     });
   }
-  //************************************************************************************************************************************
+
   handelShowModel = async () => { // arrow fun
     console.log(this);
     await this.setState({
       show: true,
     });
   }
-  //**********************************************************************************************************************************
+
   handleClose = async () => {
     await this.setState({
       show: false,
       showUpdate: false,
     })
   }
-  // *********************************************************************************************************************************
+
+
   deleteBook = async (bookID) => {
 
     // let DataResult = await axios.delete(`${process.env.REACT_APP_SERVER_LINK}/deletBook?catID=${bookId}`)
@@ -71,7 +72,7 @@ class MyFavoriteBooks extends React.Component {
       book: DataResult.data,
     });
   }
-  // *********************************************************************************************************************************
+
   bookToUpdate = async (bookInf) => { 
     await this.setState({
       showUpdate: true,
@@ -79,7 +80,7 @@ class MyFavoriteBooks extends React.Component {
     });
     
   }
-  //**********************************************************************************************************************************
+
   handleUpdateBook = async (bookInf) => {
 
     let DataResult = await axios.put(`${process.env.REACT_APP_SERVER_LINK}/updateBook/${bookInf._id}`,bookInf);// put like post
@@ -88,7 +89,7 @@ class MyFavoriteBooks extends React.Component {
     });
 
   }
-  //**********************************************************************************************************************************
+
   render() {
     return (
       <>
